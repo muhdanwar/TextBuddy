@@ -4,6 +4,8 @@
 #include "..\Storage\Storage.h"
 
 class Command {
+private:
+	string _message;
 public:
 	Command(void);
 	~Command(void);
