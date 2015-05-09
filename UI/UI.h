@@ -18,5 +18,7 @@ public:
 	static UI *getInstance();
 	void runUI();
 	string getUserInput();
+
+	void generateDisplay(vector<string>);
 };
 

@@ -10,6 +10,8 @@ enum Colour {
 	GREY, BLUE, GREEN, TURQOISE, RED, PINK, YELLOW, WHITE
 };
 
+static const Colour DEFAULT_COLOUR = LIGHT_GREY;
+
 class Printer {
 private: 
 	static Printer *_printerInstance;

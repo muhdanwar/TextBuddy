@@ -6,11 +6,11 @@
 using namespace std;
 
 enum TaskType {
-	FLOAT, DEADLINE, TIMED
+	FLOATING, DEADLINE, TIMED
 };
 
 enum RepeatType {
-	NONE = -1, WEEKDAY, MONTH, DATE
+	NONE = -1, WEEKDAY, MONTHLY, YEARLY 
 };
 
 class Task {

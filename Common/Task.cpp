@@ -9,7 +9,7 @@ Task::~Task(void) {
 }
 
 void Task::initialize() {
-	_taskType = FLOAT;
+	_taskType = FLOATING;
 	_event = "";
 	for (int i = 0; i < 3; i++) {
 		_startDate[i] = -1;
@@ -27,7 +27,7 @@ void Task::initialize() {
 
 void Task::setTaskType(TaskType taskType) {
 	switch (taskType) {
-	case FLOAT:
+	case FLOATING:
 		for (int i = 0; i < 3; i++) {
 			_startDate[i] = -1;
 			_endDate[i] = -1;

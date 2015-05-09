@@ -1,7 +1,5 @@
 #include "Printer.h"
 
-static const int defaultColour = LIGHT_GREY;
-
 Printer::Printer(void) {
 }
 
@@ -41,17 +39,17 @@ void Printer::print(const char output) {
 void Printer::colourPrint(const string output, const Colour colour) {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), colour);
 	cout << output;
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), defaultColour);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), DEFAULT_COLOUR);
 }
 
 void Printer::colourPrint(const char output, const Colour colour) {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), colour);
 	cout << output;
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), defaultColour);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), DEFAULT_COLOUR);
 }
 
 void Printer::colourPrint(void *funcPtr(void), const Colour colour) {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), colour);
 	funcPtr();
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), defaultColour);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), DEFAULT_COLOUR);
 }
